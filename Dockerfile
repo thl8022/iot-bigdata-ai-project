@@ -6,4 +6,6 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
-CMD ["python", "app.py"]
+EXPOSE 8501
+
+CMD ["streamlit", "run", "dashboard.py", "--server.address=0.0.0.0"]
