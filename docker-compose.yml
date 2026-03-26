@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres
+    container_name: postgres-iot
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: iot_db
+    ports:
+      - "5432:5432"
+
+  app:
+    build: .
+    container_name: iot_app
+    depends_on:
+      - postgres
