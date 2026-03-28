@@ -2,6 +2,14 @@
 
 Projeto desenvolvido para análise de dados de temperatura coletados por dispositivos IoT, utilizando PostgreSQL, Docker e Streamlit para visualização interativa.
 
+
+## 🎥 Apresentação do Projeto
+
+Clique no link abaixo para assistir à demonstração completa do dashboard e explicação do pipeline:
+
+👉 [Assistir ao vídeo](https://www.youtube.com/watch?v=siV-DgenpIE)
+
+
 ## Tecnologias utilizadas
 
 * Python
@@ -54,12 +62,6 @@ Views:
 * temp_in_out_timeline
 
 As views são responsáveis por transformar os dados brutos em informações analíticas utilizadas no dashboard.
-
-## 🎥 Apresentação do Projeto
-
-Clique no link abaixo para assistir à demonstração completa do dashboard e explicação do pipeline:
-
-👉 [Assistir ao vídeo](https://www.youtube.com/watch?v=siV-DgenpIE)
 
 
 ## Como executar o projeto
