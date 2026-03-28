@@ -11,9 +11,15 @@ services:
       POSTGRES_DB: iot_db
     ports:
       - "5432:5432"
+    volumes:
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./data/IOT-temp.csv:/docker-entrypoint-initdb.d/IOT-temp.csv
 
   app:
     build: .
     container_name: iot_app
     depends_on:
       - postgres
+    ports:
+      - "8501:8501"
+    command: streamlit run src/dashboard.py --server.port=8501 --server.address=0.0.0.0

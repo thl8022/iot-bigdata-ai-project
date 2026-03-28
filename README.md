@@ -1,7 +1,8 @@
-# Dashboard de Temperaturas IoT
+# 📊 Dashboard de Temperaturas IoT
 
 Projeto desenvolvido para análise de dados de temperatura coletados por dispositivos IoT, utilizando PostgreSQL, Docker e Streamlit para visualização interativa.
 
+---
 
 ## 🎥 Apresentação do Projeto
 
@@ -9,84 +10,99 @@ Clique no link abaixo para assistir à demonstração completa do dashboard e ex
 
 👉 [Assistir ao vídeo](https://www.youtube.com/watch?v=siV-DgenpIE)
 
+---
 
-## Tecnologias utilizadas
+## 📷 Dashboard
 
-* Python
-* Streamlit
-* PostgreSQL
-* Docker
-* Pandas
-* Plotly
+![Dashboard](docs/dashboard.png)
 
-## Funcionalidades
+---
 
-O dashboard apresenta:
+## 🚀 Tecnologias Utilizadas
 
-* Indicadores gerais (KPIs)
+- Python  
+- Streamlit  
+- PostgreSQL  
+- Docker  
+- Pandas  
+- Plotly  
 
-  * Temperatura máxima e mínima para ambiente interno (In) e externo (Out)
+---
 
-* Comparação de temperatura
+## 📊 Funcionalidades
 
-  * Análise entre ambiente interno e externo ao longo do tempo
+### 📌 Indicadores Gerais (KPIs)
+- Temperatura máxima e mínima (In/Out)
 
-* Leituras por hora
+### 🌡️ Comparação de Temperatura
+- Análise ao longo do tempo entre ambientes
 
-  * Distribuição da quantidade de medições ao longo do dia
+### ⏱️ Leituras por Hora
+- Distribuição das medições ao longo do dia
 
-* Temperaturas por dia
+### 📈 Temperaturas por Dia
+- Máximas e mínimas diárias
 
-  * Máximas e mínimas diárias
+---
 
-## Insights obtidos
+## 💡 Insights
 
-* O ambiente externo apresenta temperaturas mais elevadas e maior variação ao longo do tempo
-* O ambiente interno se mantém mais estável
-* Existem padrões de coleta de dados em determinados horários do dia
-* As variações diárias seguem um comportamento consistente
+- O ambiente externo apresenta maior variação térmica  
+- O ambiente interno se mantém mais estável  
+- Existem padrões de coleta ao longo do dia  
+- As variações diárias seguem um comportamento consistente  
 
-## Banco de dados
+---
 
-O projeto utiliza PostgreSQL com:
+## 🗄️ Banco de Dados
 
-Tabela:
+### 📋 Tabela
+- `temperature_readings`
 
-* temperature_readings
+### 📊 Views
+- `temp_in_out`  
+- `leituras_por_hora`  
+- `temp_max_min_por_dia`  
+- `temp_in_out_timeline`  
 
-Views:
+---
 
-* temp_in_out
-* leituras_por_hora
-* temp_max_min_por_dia
-* temp_in_out_timeline
+## ⚙️ Como Executar
 
-As views são responsáveis por transformar os dados brutos em informações analíticas utilizadas no dashboard.
+### 🐳 Execução com Docker (RECOMENDADO)
 
+Execute o comando abaixo para subir toda a aplicação (banco + dashboard):
 
-## Como executar o projeto
+```bash
+docker compose up --build
+```
 
-### Instalar dependências
-
-pip install -r requirements.txt
-
-### Executar aplicação
-
-python -m streamlit run dashboard.py
-
-## Execução com Docker
-
-docker build -t iot-dashboard .
-docker run -p 8501:8501 iot-dashboard
-
-## Acesso
-
-Após executar, acesse no navegador:
+## 🌐 Acesso no navegador
 http://localhost:8501
+
+
+## ⚠️ Observações
+
+- O banco de dados é inicializado automaticamente via Docker  
+- Os dados são carregados automaticamente a partir do arquivo CSV  
+- Não é necessário inserir dados manualmente  
+
+
+## 💻 Execução Local (opcional)
+
+```bash
+pip install -r requirements.txt
+python -m streamlit run src/dashboard.py
+```
 
 ## Objetivo do projeto
 
-Demonstrar a aplicação de conceitos de análise de dados, visualização interativa, integração com banco de dados e uso de containers.
+Demonstrar a aplicação de um pipeline completo de dados IoT, envolvendo:
+
+- Coleta de dados  
+- Armazenamento em banco  
+- Tratamento e transformação  
+- Visualização interativa  
 
 ## Autor
 

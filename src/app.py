@@ -5,7 +5,7 @@ from sqlalchemy import create_engine
 engine = create_engine("postgresql://user:password@postgres:5432/iot_db")
 
 # carregar CSV
-data = pd.read_csv("IOT-temp.csv")
+data = pd.read_csv("data/IOT-temp.csv")
 
 print("Dados carregados:")
 print(data.head())
