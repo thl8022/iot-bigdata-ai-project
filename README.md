@@ -55,6 +55,13 @@ Views:
 
 As views são responsáveis por transformar os dados brutos em informações analíticas utilizadas no dashboard.
 
+## 🎥 Apresentação do Projeto
+
+Clique no link abaixo para assistir à demonstração completa do dashboard e explicação do pipeline:
+
+👉 [Assistir ao vídeo](https://www.youtube.com/watch?v=siV-DgenpIE)
+
+
 ## Como executar o projeto
 
 ### Instalar dependências
